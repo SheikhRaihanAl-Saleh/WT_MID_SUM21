@@ -4,6 +4,8 @@
 	$pass="";
 	$err_pass="";
 	
+	
+	
     if($_SERVER["REQUEST_METHOD"]=="POST")
 	{
 	    if(empty($_POST["username"])){
@@ -25,6 +27,7 @@
 		else{
 			$pass=$_POST["pass"];
 		}
+		
 	} 
 ?>
 <html>

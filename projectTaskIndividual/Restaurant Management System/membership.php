@@ -48,7 +48,7 @@
 			$gender = $_POST["gender"];
 		}
 		
-		if(!isset($_POST["email"])){
+		if(empty($_POST["email"])){
 			$err_email="*Email Required";
 			$hasError = true;
 		}
@@ -66,7 +66,7 @@
 		else{
 			$prof = $_POST["profession"];
 		}
-		if(!isset($_POST["phone"])){
+		if(empty($_POST["phone"])){
 			$err_phone="*Phone Required";
 			$hasError = true;
 		}

@@ -55,7 +55,7 @@
 			$hasError = true;
 		}
 		else if(strlen($_POST["confirmPassword"]) <=6){
-			$err_confirmPassword="Pass must be greater than 6";
+			$err_confirmPassword="*Pass must be greater than 6";
 			$hasError = true;
 		}
 	    
@@ -76,7 +76,7 @@
 		else{
 			$gender = $_POST["gender"];
 		}
-		if(!isset($_POST["email"])){
+		if(empty($_POST["email"])){
 			$err_email="*Email Required";
 			$hasError = true;
 		}
@@ -87,12 +87,12 @@
 		else{
 			$email = $_POST["email"];
 		}
-		if(!isset($_POST["phone"])){
+		if(empty($_POST["phone"])){
 			$err_phone="*Phone Required";
 			$hasError = true;
 		}
 		else if(strlen($_POST["phone"]) <=10){
-			$err_phone="*Must be a valid phone number";
+			$err_phone="*Must be 11 digit";
 			$hasError = true;
 		}
 		else{
@@ -185,8 +185,8 @@
 					
 				</table>
 				<br>
-				<a align="right"colspan="2"><input type="reset" value="Reset"></a>
-						<a align="right"><input type="submit" value="Register"></a>
+				<a align="right"colspan="2"><input type="submit" value="Register"></a>
+						<a align="right"><input type="reset" value="Reset"></a>
 						<br></br>
 						<b>Click on</b> <a href ="CustomerLogin.php" >Login.</a>
 			</form>
